@@ -31,7 +31,7 @@ csrd-scope-mcp = "csrd_scope_mcp:main"
 [tool.setuptools]
 py-modules = ["csrd_scope", "csrd_scope_mcp", "csrd_scope_cellar"]
 # data/ ships inside the wheel as the package csrd_scope_data, so answers work offline
-# after `uvx csrd-scope` or `pip install`.
+# after `uvx --from` or `pip install`.
 packages = ["csrd_scope_data"]
 package-dir = { "csrd_scope_data" = "data" }
 

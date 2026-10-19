@@ -5,7 +5,7 @@ JSON-RPC 2.0, protocol version 2025-06-18, one message per line on stdin and std
 Standard library only. Answers come from the bundled snapshot of the legal texts; the
 server makes no network requests.
 
-Client config (Claude Code):  claude mcp add csrd-scope -- uvx --from csrd-scope csrd-scope-mcp
+Client config (Claude Code):  claude mcp add csrd-scope -- uvx --from git+https://github.com/Keremozdemirra/csrd-scope csrd-scope-mcp
 """
 from __future__ import annotations
 

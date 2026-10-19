@@ -144,10 +144,19 @@ text of every provision cited), `what_this_is_not` and `attribution`.
 
 ## Install
 
+Nothing is published to PyPI; every install runs straight from GitHub.
+
 ```bash
-uvx csrd-scope check --input undertaking.json      # or: pipx run csrd-scope check --input undertaking.json
-uvx csrd-scope thresholds
-claude mcp add csrd-scope -- uvx --from csrd-scope csrd-scope-mcp
+uvx --from git+https://github.com/Keremozdemirra/csrd-scope csrd-scope check --input undertaking.json
+uvx --from git+https://github.com/Keremozdemirra/csrd-scope csrd-scope thresholds
+claude mcp add csrd-scope -- uvx --from git+https://github.com/Keremozdemirra/csrd-scope csrd-scope-mcp
+```
+
+To install it instead: `pipx install git+https://github.com/Keremozdemirra/csrd-scope` or `pip install git+https://github.com/Keremozdemirra/csrd-scope`, which put `csrd-scope` and `csrd-scope-mcp` on
+the path. From a checkout:
+
+```bash
+git clone https://github.com/Keremozdemirra/csrd-scope && cd csrd-scope && pip install .
 ```
 
 Python 3.9 or later, standard library only. The quoted provisions it needs ship inside the package.
